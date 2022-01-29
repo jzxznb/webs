@@ -1,0 +1,182 @@
+* {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+#app {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: #f3f3f3;
+}
+.wrap {
+  padding: 1rem 1rem 0 1rem;
+  display: flex;
+  position: relative;
+}
+.rag-item-2c {
+  overflow: hidden;
+  flex: 1;
+  border-radius: 0.5rem;
+}
+
+.j-card {
+  position: relative;
+  transform-style: preserve-3d;
+}
+.j-card .flip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+.j-card .flip .card {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  right: 0;
+  backface-visibility: hidden;
+  transition: all 0.6s;
+}
+.j-card .flip .front {
+  z-index: 2;
+  background-color: antiquewhite;
+}
+.j-card .flip .back {
+  transform: rotateY(-180deg);
+}
+
+.j-carousel {
+  display: flex;
+  position: relative;
+  background-color: white;
+  justify-content: center;
+}
+.j-carousel .carousel-detail .pic-item {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.j-carousel .carousel-detail .show {
+  transform: translateX(0) scale(1);
+}
+.j-carousel .carousel-detail .pre {
+  transform: translateX(-100vw) scale(1);
+}
+.j-carousel .carousel-detail .next {
+  transform: translateX(100vw) scale(1);
+}
+.j-carousel .carousel-detail .is-animation {
+  transition: transform 0.4s ease-in-out;
+}
+.j-carousel .carousel-page-button {
+  z-index: 1;
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+}
+.j-carousel .carousel-page-button .carousel-page-button-item {
+  list-style: none;
+  height: 0.7rem;
+  width: 0.7rem;
+  background-color: #aaaaaa;
+  margin: 0 0.3rem;
+  border-radius: 0.7rem;
+  cursor: pointer;
+}
+.j-carousel .carousel-page-button .is-focus {
+  background-color: white;
+}
+
+.j-header .header-info {
+  padding: 1.5rem 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+.j-header .header-info .first {
+  display: flex;
+  flex: 1;
+}
+.j-header .header-info .first img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.2rem;
+}
+.j-header .header-info .first a {
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.3rem;
+  color: white;
+  margin-left: 0.8rem;
+  font-size: 0.5rem;
+  text-decoration: none;
+}
+.j-header .header-info .first a i {
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  background-size: cover;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgEAYAAAAj6qa3AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAZiS0dEAAAAAAAA+UO7fwAAAAlwSFlzAAAASAAAAEgARslrPgAAAVNJREFUaN7tlbuKwkAYhTMrCvYq6hMIXhp9HCufxRt2+hKChdfe0lobL7VVLLS2OWeLf1kIO26V+LM7c5pDEgjn+8KQIPDx8fGJISRJGkMQRL8v15WK9q73CQBBjEaMJAylq1Xtfa/yEdubTGAC83xGbxYK0tutCKrVtIETj3zxbpfWhKEXERFRr2vvfJOIXs8u4nZzR0Tk7+CyCJLkYPC7iEZDe6eyiPtdutnU3vkmEcPhSxEgiFZLe2fCAoyRHo+9CJLkZGIX8Xg4IiKblb5e7SJ2O+2d8YODIDIZAdxs7OCXi3S5rL03IfD12g5+Pv9z8NXKg7sFvlz+YAZBnE5yUSpp740ZPJ0WsMXCg7sFPp/bz/jxKF0sau+ND5wkmUpJT6fOgH8LAEHMZnbww0Ge5/PaO5MTQJLsdL4OOKT3ewHP5bT3vU8ECKLddg7cx+dv5hOn7oxDvqPlPQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOS0xMS0yMFQxNjoyMzo1MSswODowMBc5J4AAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTktMTEtMjBUMTY6MjM6NTErMDg6MDBmZJ88AAAAU3RFWHRzdmc6YmFzZS11cmkAZmlsZTovLy9ob21lL2FkbWluL2ljb24tZm9udC90bXAvaWNvbl9zNW5mbWl3bGk3aS9hcnJvdy1yaWdodC1jb3B5LnN2Z/xttb0AAAAASUVORK5CYII=');
+}
+.j-header .header-info .second .like {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 20px;
+  position: relative;
+}
+.j-header .header-info .second .like .animate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: clickLike 0.5s linear;
+}
+.j-header .back-ground {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  height: 25rem;
+  overflow: hidden;
+}
+.j-header .back-ground img {
+  width: 100%;
+}
+.j-header .back-ground::before {
+  content: '';
+  background: linear-gradient(to bottom, rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5), #999999);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.j-header .back-ground::after {
+  content: '';
+  background: linear-gradient(180deg, hsla(0, 0%, 95.3%, 0), hsla(0, 0%, 97.3%, 0.09) 10%, #f3f3f3);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: -1rem;
+}
+@keyframes clickLike {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -2.3rem;
+    opacity: 0.2;
+  }
+}
+
